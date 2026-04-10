@@ -44,7 +44,7 @@ const FeatureSlider = () => {
   }, [index, progress]);
 
   return (
-    <section className="py-20 bg-[#f7f5f3] overflow-hidden">
+    <section className="pb-20 bg-[#f7f5f3] overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
         
         {/* Image Display Area */}
@@ -118,7 +118,7 @@ const FeatureSlider = () => {
               </button>
             );
 
-            
+
           })}
           </div>
         </div>

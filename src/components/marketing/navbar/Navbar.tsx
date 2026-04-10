@@ -13,7 +13,7 @@ const Navbar = () => {
         {/* Left Side: Logo and Links */}
         <div className="flex items-center gap-8">
           <Link href="/" className="text-xl font-semibold text-slate-900 tracking-tight" onClick={() => setIsOpen(false)}>
-            RetailPos
+            ShopPulse
           </Link>
           
           <div className="hidden md:flex items-center gap-6">

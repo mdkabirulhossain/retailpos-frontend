@@ -44,11 +44,11 @@ const FeatureSlider = () => {
   }, [index, progress]);
 
   return (
-    <section className="pb-20 bg-[#f7f5f3] overflow-hidden">
+    <section className="pb-20 bg-marketing overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
         
         {/* Image Display Area */}
-        <div className="relative aspect-[16/9] w-full mb-12 rounded-xl overflow-hidden shadow-2xl bg-white border border-gray-200/50">
+        <div className="relative aspect-video w-full mb-12 rounded-xl overflow-hidden shadow-2xl bg-white border border-gray-200/50">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
@@ -77,7 +77,7 @@ const FeatureSlider = () => {
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#000_10px,#000_11px)]" />
 
         <div className="max-w-6xl mx-auto px-4 relative z-10 w-full">
-          <div className="grid grid-cols-1 md:grid-cols-3 bg-[#f7f5f3] border-x border-gray-200">
+          <div className="grid grid-cols-1 md:grid-cols-3 bg-marketing border-x border-gray-200">
             {features.map((feature, i) => {
             const isActive = i === index;
             return (
@@ -94,11 +94,11 @@ const FeatureSlider = () => {
                 {/* Top Progress Bar */}
                 {isActive && (
                   <motion.div 
-                    className="absolute top-0 left-0 h-[3px] bg-[#33312e] z-10"
+                    className="absolute top-0 left-0 h-0.75 bg-[#33312e] z-10"
                     style={{ width: `${progress}%` }}
                   />
                 )}
-                <div className="absolute top-0 left-0 w-full h-[1px] bg-gray-200" />
+                <div className="absolute top-0 left-0 w-full h-px bg-gray-200" />
 
                 <h3 className={`text-lg font-semibold mb-2 transition-colors ${
                   isActive ? "text-[#33312e]" : "text-[#6b6967]"

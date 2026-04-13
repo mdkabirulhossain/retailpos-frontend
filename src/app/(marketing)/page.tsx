@@ -1,6 +1,7 @@
 import FeatureSlider from "@/src/components/marketing/featureSlider/FeatureSlider";
 import Hero from "@/src/components/marketing/hero/Hero";
 import PlatFormSlider from "@/src/components/marketing/platFormSlider/platFormSlider";
+import PricingSection from "@/src/components/marketing/PriceSection/PricingSection";
 
 export default function LandingPage() {
   return (
@@ -8,7 +9,7 @@ export default function LandingPage() {
       <Hero />
       <FeatureSlider />
       <PlatFormSlider />
-      {/* Additional sections such as Features, Testimonials, etc. would go here */}
+      <PricingSection />
     </>
   );
 }

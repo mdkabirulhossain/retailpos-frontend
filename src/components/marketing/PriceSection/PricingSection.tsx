@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 
 const PricingSection = () => {
@@ -61,7 +60,6 @@ const PricingSection = () => {
   return (
     <section className="py-24 bg-[#f9f9f9] min-h-screen">
       <div className="max-w-7xl mx-auto px-4">
-        
         {/* Header Section */}
         <div className="flex flex-col items-center text-center mb-16">
           <div className="inline-flex items-center px-4 py-1 mb-6 rounded-full border border-gray-300 bg-white text-[12px] font-medium text-gray-600 shadow-sm">
@@ -75,46 +73,61 @@ const PricingSection = () => {
             Start free, upgrade when you&apos;re ready.
           </p>
         </div>
+      </div>
 
-        {/* Custom Toggle Switch */}
-        <div className="flex justify-center mb-16">
-          <div className="bg-[#efefef] p-1 rounded-full flex items-center border border-gray-200 shadow-inner">
+      {/* Custom Toggle Switch (Full Width Layout) */}
+      <div className="relative py-12 mb-24 flex items-center justify-center">
+        {/* Horizontal line passing through the middle */}
+        <div className="absolute inset-x-0 top-1/2 h-px bg-gray-200 -translate-y-1/2" />
+        
+        {/* Horizontal lines above and below the toggle section */}
+        <div className="absolute top-0 left-0 w-full h-px bg-gray-200" />
+
+        {/* The Outer Decorative Box */}
+        <div className="relative z-10 p-3 border border-gray-200 rounded-xl bg-[#f9f9f9]">
+          {/* Corner Dots */}
+          <div className="absolute -top-1.5 -left-1.5 w-3 h-3 bg-gray-200 rounded-full border-4 border-[#f9f9f9]" />
+          <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-gray-200 rounded-full border-4 border-[#f9f9f9]" />
+          <div className="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-gray-200 rounded-full border-4 border-[#f9f9f9]" />
+          <div className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-gray-200 rounded-full border-4 border-[#f9f9f9]" />
+
+          {/* The Actual Switch */}
+          <div className="bg-[#e5e7eb] p-1 rounded-full flex items-center w-64 shadow-inner">
             <button
               onClick={() => setBillingCycle('annually')}
-              className={`px-6 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
-                billingCycle === 'annually' 
-                ? "bg-white text-[#33312e] shadow-md" 
-                : "text-gray-500 hover:text-gray-700"
-              }`}
+              className={`flex-1 py-2 text-sm font-bold rounded-full transition-all duration-300 ${billingCycle === 'annually'
+                ? "bg-white text-[#33312e] shadow-[0_2px_10px_rgba(0,0,0,0.1)]"
+                : "text-gray-500"
+                }`}
             >
               Annually
             </button>
             <button
               onClick={() => setBillingCycle('monthly')}
-              className={`px-6 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
-                billingCycle === 'monthly' 
-                ? "bg-white text-[#33312e] shadow-md" 
-                : "text-gray-500 hover:text-gray-700"
-              }`}
+              className={`flex-1 py-2 text-sm font-bold rounded-full transition-all duration-300 ${billingCycle === 'monthly'
+                ? "bg-white text-[#33312e] shadow-[0_2px_10px_rgba(0,0,0,0.1)]"
+                : "text-gray-500"
+                }`}
             >
               Monthly
             </button>
           </div>
         </div>
+      </div>
 
+      <div className="max-w-7xl mx-auto px-4"> {/* Re-open max-w-7xl for grid */}
         {/* Pricing Grid with Decorative Sides */}
         <div className="relative max-w-6xl mx-auto">
           {/* Background Decorative Hatched Pattern (Left/Right) */}
           <div className="absolute inset-y-0 -left-8 w-8 opacity-[0.08] pointer-events-none bg-[repeating-linear-gradient(45deg,transparent,transparent_5px,#000_5px,#000_6px)]" />
           <div className="absolute inset-y-0 -right-8 w-8 opacity-[0.08] pointer-events-none bg-[repeating-linear-gradient(45deg,transparent,transparent_5px,#000_5px,#000_6px)]" />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 border border-gray-200 bg-white shadow-sm overflow-hidden">
+          <div className="grid gap-2 grid-cols-1  md:grid-cols-3 border border-gray-200 bg-white shadow-sm overflow-hidden">
             {plans.map((plan, idx) => (
-              <div 
+              <div
                 key={idx}
-                className={`p-10 flex flex-col border-r last:border-r-0 border-gray-200 ${
-                  plan.isDark ? "bg-[#33312e] text-white" : "bg-white text-[#33312e]"
-                }`}
+                className={`p-10 flex flex-col border-r border-l last:border-r-0 border-gray-200 ${plan.isDark ? "bg-[#33312e] text-white" : "bg-white text-[#33312e]"
+                  }`}
               >
                 <h3 className="text-2xl font-bold mb-3">{plan.name}</h3>
                 <p className={`text-sm mb-10 leading-relaxed ${plan.isDark ? "text-gray-400" : "text-gray-500"}`}>
@@ -130,15 +143,14 @@ const PricingSection = () => {
                   </p>
                 </div>
 
-                <button className={`w-full py-4 rounded-full font-semibold transition-all mb-12 ${
-                  plan.isDark 
-                  ? "bg-white text-[#33312e] hover:bg-gray-100" 
+                <button className={`w-full py-4 rounded-full font-semibold transition-all mb-12 ${plan.isDark
+                  ? "bg-white text-[#33312e] hover:bg-gray-100"
                   : "bg-[#33312e] text-white hover:bg-black"
-                }`}>
+                  }`}>
                   {plan.buttonText}
                 </button>
 
-                <ul className="space-y-4 flex-grow">
+                <ul className="space-y-4 grow">
                   {plan.features.map((feature, fIdx) => (
                     <li key={fIdx} className="flex items-start gap-3">
                       <Check className={`w-4 h-4 mt-0.5 ${plan.isDark ? "text-orange-400" : "text-gray-400"}`} />

@@ -35,7 +35,7 @@ const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-[#f9f9f9] overflow-x-hidden">
+    <section id="faq" className="py-24 bg-[#f9f9f9] overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
           

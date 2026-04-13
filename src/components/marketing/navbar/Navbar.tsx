@@ -10,7 +10,7 @@ const Navbar = () => {
     return (
         <nav className="fixed top-6 left-0 right-0 z-50 flex flex-col items-center px-4 pointer-events-none">
             {/* The background matches the page to "cut" the line behind it */}
-            <div className="flex items-center justify-between w-full max-w-4xl h-14 px-6 bg-[#f7f5f3] border border-gray-300/60 rounded-full shadow-sm pointer-events-auto">
+            <div className="flex items-center justify-between w-full max-w-4xl h-14 px-6 bg-marketing border border-gray-300/60 rounded-full shadow-sm pointer-events-auto">
 
                 {/* Left Side: Logo and Links */}
                 <div className="flex items-center gap-8">
@@ -19,14 +19,14 @@ const Navbar = () => {
                     </Link>
 
                     <div className="hidden md:flex items-center gap-6">
-                        <Link href="#products" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
-                            Products
+                        <Link href="#features" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
+                            Feature
                         </Link>
                         <Link href="#pricing" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
                             Pricing
                         </Link>
-                        <Link href="#docs" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
-                            Docs
+                        <Link href="#faq" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
+                            FAQ
                         </Link>
                     </div>
                 </div>
@@ -56,13 +56,13 @@ const Navbar = () => {
 
             {/* Mobile Menu Dropdown */}
             {isOpen && (
-                <div className="md:hidden mt-3 w-full max-w-4xl bg-white/95 backdrop-blur-md border border-gray-200/50 rounded-2xl shadow-lg p-3 flex flex-col gap-1 pointer-events-auto shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+                <div className="md:hidden mt-3 w-full max-w-4xl bg-white/95 backdrop-blur-md border border-gray-200/50 rounded-2xl shadow-lg p-3 flex flex-col gap-1 pointer-events-auto">
                     <Link
-                        href="#products"
+                        href="#features"
                         className="text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-gray-50/80 px-4 py-3 rounded-xl transition-colors"
                         onClick={() => setIsOpen(false)}
                     >
-                        Products
+                        Feature
                     </Link>
                     <Link
                         href="#pricing"
@@ -72,11 +72,11 @@ const Navbar = () => {
                         Pricing
                     </Link>
                     <Link
-                        href="#docs"
+                        href="#faq"
                         className="text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-gray-50/80 px-4 py-3 rounded-xl transition-colors"
                         onClick={() => setIsOpen(false)}
                     >
-                        Docs
+                        FAQ
                     </Link>
                     <div className="my-1 border-t border-gray-200/50" />
                     <button className="w-full text-left px-4 py-3 text-sm font-medium text-slate-900 hover:bg-gray-50/80 rounded-xl transition-colors">

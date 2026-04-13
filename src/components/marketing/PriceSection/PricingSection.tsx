@@ -65,10 +65,10 @@ const PricingSection = () => {
           <div className="inline-flex items-center px-4 py-1 mb-6 rounded-full border border-gray-300 bg-white text-[12px] font-medium text-gray-600 shadow-sm">
             <span className="mr-1.5">$</span> Plans & Pricing
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-[#33312e] tracking-tight mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-[#33312e] tracking-tight mb-8">
             Choose the perfect plan <br /> for your business
           </h2>
-          <p className="text-lg text-gray-500 max-w-2xl leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-500 max-w-2xl leading-relaxed">
             Scale your operations with flexible pricing that grows with your team. <br />
             Start free, upgrade when you&apos;re ready.
           </p>
@@ -136,7 +136,7 @@ const PricingSection = () => {
 
                 <div className="mb-10">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-6xl font-serif font-light tracking-tight">${plan.price}</span>
+                    <span className="text-5xl md:text-6xl font-serif font-light tracking-tight">${plan.price}</span>
                   </div>
                   <p className={`text-xs mt-3 ${plan.isDark ? "text-gray-400" : "text-gray-500"}`}>
                     per year, per user.

@@ -44,7 +44,7 @@ const PlatFormSlider = () => {
   }, [index, progress]);
 
   return (
-    <section className="py-20 bg-[#f9f9f9] overflow-hidden">
+    <section id="features" className="py-20 bg-[#f9f9f9] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header Section */}

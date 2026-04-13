@@ -1,3 +1,4 @@
+import CTASection from "@/src/components/marketing/ctaSection/CTASection";
 import FAQSection from "@/src/components/marketing/faqSection/FAQSection";
 import FeatureSlider from "@/src/components/marketing/featureSlider/FeatureSlider";
 import Hero from "@/src/components/marketing/hero/Hero";
@@ -12,6 +13,7 @@ export default function LandingPage() {
       <PlatFormSlider />
       <PricingSection />
       <FAQSection />
+      <CTASection />
     </>
   );
 }

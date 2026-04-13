@@ -100,12 +100,12 @@ const FeatureSlider = () => {
                 )}
                 <div className="absolute top-0 left-0 w-full h-px bg-gray-200" />
 
-                <h3 className={`text-lg font-semibold mb-2 transition-colors ${
+                <h3 className={`text-base md:text-lg font-semibold mb-2 transition-colors ${
                   isActive ? "text-[#33312e]" : "text-[#6b6967]"
                 }`}>
                   {feature.title}
                 </h3>
-                <p className={`text-sm leading-relaxed transition-colors ${
+                <p className={`text-[13px] md:text-sm leading-relaxed transition-colors ${
                   isActive ? "text-[#33312e]/80" : "text-[#6b6967]/70"
                 }`}>
                   {feature.description}

@@ -58,7 +58,7 @@ const PricingSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-[#f9f9f9] min-h-screen">
+    <section className="py-24 bg-[#f9f9f9] min-h-screen overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section */}
         <div className="flex flex-col items-center text-center mb-16">

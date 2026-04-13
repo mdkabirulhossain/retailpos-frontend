@@ -53,10 +53,10 @@ const PlatFormSlider = () => {
             <span className="w-2 h-2 rounded-full border border-gray-400 mr-2"></span>
             Platform Features
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-[#33312e] tracking-tight mb-6">
-            Streamline your <br /> business operations
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-[#33312e] tracking-tight mb-6">
+            Streamline your <br className="hidden md:block" /> business operations
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
+          <p className="text-base sm:text-xl text-gray-600 max-w-2xl leading-relaxed">
             Manage schedules, analyze data, and collaborate with your team all in one powerful platform.
           </p>
         </div>
